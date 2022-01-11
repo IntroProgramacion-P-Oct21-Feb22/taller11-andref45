@@ -17,26 +17,26 @@ public class Ejemplo10 {
         int sumaDos;
         mensajeSuma = obtenerSuma(10, 9);
         sumaDos = obtenerSuma(10);
-        
+
         System.out.printf("%s\n", mensajeSuma);
         System.out.printf("%d\n", sumaDos);
     }
-        
-    public static String obtenerSuma(int operandor1, int operandor2){
+
+    public static String obtenerSuma(int operandor1, int operandor2) {
         int suma;
         String cadena = "";
         suma = operandor1 + operandor2;
         cadena = String.format("%s%d\n", cadena, suma);
-        return cadena;        
+        return cadena;
     }
-    
-    public static int obtenerSuma(int operandor1, int operandor2){
+
+    public static int obtenerSuma(int operandor1) {
         int suma;
         String cadena = "";
         suma = operandor1 + operandor1;
         cadena = String.format("%s%d\n", cadena, suma);
-        return suma;        
-        
+        return suma;
+
     }
-    
+
 }

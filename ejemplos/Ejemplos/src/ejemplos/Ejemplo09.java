@@ -15,28 +15,56 @@ public class Ejemplo09 {
         // 
         String mensajeSuma;
         String mensajeSumaDos;
+        String mensajeSumaTres;
+        int[] valores = {9, 10, 100, 200};
         mensajeSuma = obtenerSuma(10, 9);
         mensajeSumaDos = obtenerSuma(10);
+        mensajeSumaTres = obtenerSuma(1000, 1, 10);
         
+
         System.out.printf("%s\n", mensajeSuma);
         System.out.printf("%s\n", mensajeSumaDos);
-    }
+        System.out.printf("%s\n", mensajeSumaTres);
         
-    public static String obtenerSuma(int operandor1, int operandor2){
+        mensajeSuma = obtenerSuma(valores);
+        System.out.printf("%s\n", mensajeSuma);
+    }
+
+    public static String obtenerSuma(int operandor1, int operandor2) {
         int suma;
         String cadena = "";
         suma = operandor1 + operandor2;
         cadena = String.format("%s%d\n", cadena, suma);
-        return cadena;        
+        return cadena;
     }
-    
-    public static String obtenerSuma(int operandor1){
+
+    public static String obtenerSuma(int operandor1) {
         int suma;
         String cadena = "";
         suma = operandor1 + operandor1;
         cadena = String.format("%s%d\n", cadena, suma);
-        return cadena;        
-        
+        return cadena;
+
     }
-    
+
+    public static String obtenerSuma(int var1, int var2, int var3) {
+        int suma;
+        String cadena = "";
+        suma = var1 + var2 + var3;
+        cadena = String.format("%s%d\n", cadena, suma);
+        return cadena;
+
+    }
+
+    public static String obtenerSuma(int[] datos) {
+        int suma = 0;
+        String cadena = "";
+        for (int i = 0; i < datos.length; i++) {
+            suma = suma + datos[i];
+        }
+
+        cadena = String.format("%s%d\n", cadena, suma);
+        return cadena;
+
+    }
 }
